@@ -1,0 +1,151 @@
+<resources>
+
+    <string name="app_name">Shop</string>
+    <string name="name">Név</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="username">Felhasználónév</string>
+    <string name="email_address">Email-cím</string>
+    <string name="password_again">Jelszó megerőítése</string>
+    <string name="cancel">Mégse</string>
+    <string name="phone_number">Telefonszám</string>
+    <string name="address">Postai cím</string>
+    <string name="buyer">Vásárló</string>
+    <string name="seller">Eladó</string>
+    <string name="description">Termék leírás.</string>
+
+    <string name="title_placeholder">Title</string>
+    <string name="item_placeholder">Leírás</string>
+    <string name="item_info_placeholder">Here is some news</string>
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices congue rutrum. Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum blandit, dolor diam fringilla tellus, eu euismod mauris neque at neque.</string>
+    <string name="search">Keresés</string>
+    <string name="cart">Kosárba</string>
+    <string name="view">Nézet</string>
+    <string name="settings">Beállítások</string>
+    <string name="logout">Kijelentkezés</string>
+    <string name="delete">Törlés</string>
+
+    <string-array name="phone_labels">
+        <item>Otthon</item>
+        <item>Munkahely</item>
+        <item>Mobil</item>
+        <item>Egyéb</item>
+    </string-array>
+
+    <string-array name="shopping_item_names">
+        <item>Virágos férfi bermuda</item>
+        <item>"Szines női bikini szett"</item>
+        <item>"Marveles gyermek fürdőruha"</item>
+        <item>"Színes lány fürdőruha mintával"</item>
+        <item>"Mintás férfi fürdőnadrág"</item>
+        <item>"Leveles férfi bermuda"</item>
+        <item>"Kétdarabos lány fürdőruha"</item>
+        <item>"Bordó bikini szett"</item>
+        <item>"Mintás uszónadrág"</item>
+        <item>"Levélmintás bermuda"</item>
+        <item>"Türkizkék bikini szett"</item>
+        <item>"Tengeri mintás fürdőnadrág"</item>
+        <item>"Csillagmintás fürdőruha"</item>
+        <item>"Kék fürdőnadrág"</item>
+        <item>"Aréna úszónadrág"</item>
+        <item>"Fekete bikini"</item>
+        <item>"Mintás fürdőruha"</item>
+        <item>"Szivárványszínű fürdőruha"</item>
+    </string-array>
+
+    <string-array name="shopping_item_desc">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <array name="shopping_item_rates">
+        <item>ferfi</item>
+        <item>noi</item>
+        <item>fiu</item>
+        <item>lany</item>
+        <item>ferfi</item>
+        <item>ferfi</item>
+        <item>lany</item>
+        <item>noi</item>
+        <item>fiu</item>
+        <item>ferfi</item>
+        <item>noi</item>
+        <item>fiu</item>
+        <item>lany</item>
+        <item>fiu</item>
+        <item>fiu</item>
+        <item>noi</item>
+        <item>lany</item>
+        <item>lany</item>
+
+    </array>
+
+    <array name="shopping_item_images">
+        <item>@drawable/ferfi1</item>
+        <item>@drawable/noi1</item>
+        <item>@drawable/fiu1</item>
+        <item>@drawable/lany1</item>
+        <item>@drawable/ferfi2</item>
+        <item>@drawable/ferfi3</item>
+        <item>@drawable/lany2</item>
+        <item>@drawable/noi2</item>
+        <item>@drawable/fiu2</item>
+        <item>@drawable/ferfi4</item>
+        <item>@drawable/noi3</item>
+        <item>@drawable/fiu3</item>
+        <item>@drawable/lany4</item>
+        <item>@drawable/fiu5</item>
+        <item>@drawable/fiu4</item>
+        <item>@drawable/noi4</item>
+        <item>@drawable/lany3</item>
+        <item>@drawable/layn5</item>
+    </array>
+
+    <array name="shopping_item_price">
+        <item>5500 Ft</item>
+        <item>5000 Ft</item>
+        <item>3000 Ft</item>
+        <item>4000 Ft</item>
+        <item>7000 Ft</item>
+        <item>2000 Ft</item>
+        <item>3000 Ft</item>
+        <item>7000 Ft</item>
+        <item>5400 Ft</item>
+        <item>6500 Ft</item>
+        <item>5000 Ft</item>
+        <item>7000 Ft</item>
+        <item>8800 Ft</item>
+        <item>7000 Ft</item>
+        <item>6000 Ft</item>
+        <item>3000 Ft</item>
+        <item>7500 Ft</item>
+        <item>9000 Ft</item>
+
+    </array>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
