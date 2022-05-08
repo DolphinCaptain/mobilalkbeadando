@@ -11,8 +11,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -27,9 +30,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>  {
-
-
+public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
 
     private static final String LOG_TAG = LoginActivity.class.getName();
@@ -43,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     private SharedPreferences preferences;
     private FirebaseAuth mAuth;
 
-
+Button loginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,19 +65,30 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         String email = emailET.getText().toString();
         String password = passwordET.getText().toString();
 
-        // Log.i(LOG_TAG, "Bejelentkezett: " + email + ", jelszó: " + password);
 
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Log.d(LOG_TAG, "Login done!");
-                    startShopping();
-                } else {
-                    Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_LONG).show();
+        if (email.length() == 0) {
+            Toast.makeText(LoginActivity.this, "You have to type in your email.", Toast.LENGTH_LONG).show();
+        } else if (password.length() == 0) {
+            Toast.makeText(LoginActivity.this, "You have to type in password.", Toast.LENGTH_LONG).show();
+        } else {
+
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        Log.d(LOG_TAG, "Login done!");
+                        startShopping();
+                    } else {
+
+
+                        Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_LONG).show();
+                    }
+
+
+
                 }
-            }
-        });
+            });
+        }
     }
 
     private void startShopping() {
@@ -115,9 +127,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         super.onResume();
         Log.i(LOG_TAG, "onResume");
     }
-
-
-
 
 
     @NonNull

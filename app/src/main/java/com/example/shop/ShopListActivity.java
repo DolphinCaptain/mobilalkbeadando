@@ -69,7 +69,7 @@ public class ShopListActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ArrayList<ShoppingItem> mItemsData;
     private ShoppingRateTypeAdapter mAdapter;
-    private ShoppingItemAdapter faszom;
+
 
     private NotificationHelper mNotificationHelper;
 
@@ -102,7 +102,6 @@ public class ShopListActivity extends AppCompatActivity {
 
 
 
-        faszom = new ShoppingItemAdapter(this,mItemsData);
         // Initialize the ArrayList that will contain the data.
         mItemsData = new ArrayList<>();
         // Initialize the adapter and set it to the RecyclerView.
@@ -119,6 +118,7 @@ public class ShopListActivity extends AppCompatActivity {
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
         this.registerReceiver(powerReceiver, filter);
+
 
 
         // Intent intent = new Intent("CUSTOM_MOBALKFEJL_BROADCAST");
@@ -220,12 +220,11 @@ public class ShopListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 ShoppingItem selectItem = (ShoppingItem) (listView.getItemAtPosition(position));
-                Intent showDetail = new Intent(getApplicationContext(), ListItemActivity.class);
+                Intent showDetail = new Intent(getApplicationContext(), ShoppingRateTypeAdapter.class);
                 showDetail.putExtra("id", selectItem._getId());
                 startActivity(showDetail);
             }
         });
-
     }
 
 
@@ -241,8 +240,6 @@ public class ShopListActivity extends AppCompatActivity {
             if (mItemsData.size() == 0) {
                 initializeData();setUpList();
                 queryData();
-
-                setUpOnclickListener();
             }
 
             // Notify the adapter of the change.
@@ -296,11 +293,6 @@ public class ShopListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.log_out_button:
-                Log.d(LOG_TAG, "Logout clicked!");
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                return true;
             case R.id.settings_button:
                 Log.d(LOG_TAG, "Setting clicked!");
                 FirebaseAuth.getInstance().signOut();
@@ -314,12 +306,6 @@ public class ShopListActivity extends AppCompatActivity {
         }
     }
 
-    private void changeSpanCount(MenuItem item, int drawableId, int spanCount) {
-        viewRow = !viewRow;
-        item.setIcon(drawableId);
-        GridLayoutManager layoutManager = (GridLayoutManager) mRecyclerView.getLayoutManager();
-        layoutManager.setSpanCount(spanCount);
-    }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
@@ -339,6 +325,9 @@ public class ShopListActivity extends AppCompatActivity {
     }
 
     public void updateAlertIcon(ShoppingItem item) {
+
+
+
         cartItems = (cartItems + 1);
         if (0 < cartItems) {
             countTextView.setText(String.valueOf(cartItems));
@@ -351,6 +340,8 @@ public class ShopListActivity extends AppCompatActivity {
         mItems.document(item._getId()).update("cartedCount", item.getCartedCount() + 1).addOnFailureListener(failure -> {
             Toast.makeText(this, "Item " + item._getId() + "cannot be changed.", Toast.LENGTH_LONG).show();
         });
+
+        //mNotificationHelper.send(item.getName());
         queryData();
     }
 

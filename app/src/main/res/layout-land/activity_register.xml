@@ -8,28 +8,9 @@
     android:id="@+id/registration">
 
 
-    <TextView
-        android:id="@+id/registrationTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
-
-
-        android:layout_marginEnd="-1dp"
-
-        android:background="#FCFDCB00"
-        android:padding="10dp"
-        android:text="@string/registration"
-        android:textAlignment="center"
-        android:textSize="24sp" />
-
     <EditText
         android:id="@+id/userNameEditText"
-        android:layout_width="match_parent"
+        android:layout_width="676dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/registrationTextView"
         android:layout_alignParentStart="true"
@@ -37,7 +18,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginEnd="34dp"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="@string/username"
@@ -45,13 +26,15 @@
 
     <EditText
         android:id="@+id/userEmailEditText"
-        android:layout_width="match_parent"
+        android:layout_width="673dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/userNameEditText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="@string/email_address"
@@ -59,13 +42,15 @@
 
     <EditText
         android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
+        android:layout_width="674dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/userEmailEditText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="@string/password"
@@ -73,13 +58,15 @@
 
     <EditText
         android:id="@+id/passwordAgainEditText"
-        android:layout_width="match_parent"
+        android:layout_width="673dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/passwordEditText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="26dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="@string/password_again"
@@ -87,40 +74,39 @@
 
     <EditText
         android:id="@+id/phoneEditText"
-        android:layout_width="match_parent"
+        android:layout_width="672dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/passwordAgainEditText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="@string/phone_number"
         android:inputType="phone" />
 
 
-
-
-
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/phoneEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="199dp"
         android:orientation="horizontal">
 
         <Button
-            android:onClick="register"
-            android:text="@string/registration"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="56dp"
             android:background="@drawable/rounded_rectangle"
+            android:onClick="register"
+            android:text="@string/registration"
             android:textAllCaps="true"
             android:textColor="#045C59"
             android:textSize="14sp"
@@ -130,18 +116,17 @@
         <Button
 
 
-            android:onClick="cancel"
-            android:text="@string/cancel"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="56dp"
             android:background="@drawable/rounded_rectangle"
+            android:onClick="cancel"
+            android:text="@string/cancel"
             android:textAllCaps="true"
             android:textColor="#045C59"
-            android:textSize="15sp"
-             />
+            android:textSize="15sp" />
 
     </LinearLayout>
 </RelativeLayout>

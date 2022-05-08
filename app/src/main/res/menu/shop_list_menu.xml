@@ -19,19 +19,9 @@
         />
 
 
-
-
-    <item
-        android:id="@+id/log_out_button"
-        android:title="@string/logout"
-        app:showAsAction="never"
-
-        android:orderInCategory="2"
-        />
-
     <item
         android:id="@+id/settings_button"
-        android:title="@string/settings"
+        android:title="@string/logout"
         app:showAsAction="never"
 
         android:orderInCategory="1"
